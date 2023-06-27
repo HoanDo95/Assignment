@@ -8,6 +8,7 @@ public class SpecCar extends Car{
     private int type;
    
     public SpecCar(){
+        super();
         type = 0;
     }
 
@@ -18,12 +19,12 @@ public class SpecCar extends Car{
 
     @Override
     public String toString() {
-        return type + maker + price ;
+        return super.toString()+ "," + type ;
     }
     
     public void setData(){
-        maker = "XZ" + maker;
-        price += 20;
+        setMaker("XZ" + getMaker());
+        setPrice(20 + getPrice());
     }
     
     public int getValue(){
@@ -33,7 +34,7 @@ public class SpecCar extends Car{
         }
         else 
             inc = 15;
-        return (int) (price + inc);
+        return (int) (getPrice() + inc);
     }
     
 }

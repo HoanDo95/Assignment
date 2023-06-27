@@ -5,8 +5,8 @@
  * @author HOAN DO
  */
 public class Car {
-   protected String maker;
-   protected int price;
+   private String maker;
+   private int price;
 
    public Car(){
        maker = "";
@@ -29,12 +29,16 @@ public class Car {
     public int getPrice() {
         return price;
     }
+    
+    public void setPrice(int price){
+        this.price = price;
+    }
 
    
 
     @Override
     public String toString() {
-        return maker + price ;
+        return maker + "," + price ;
     }
    
    
