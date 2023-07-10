@@ -14,12 +14,12 @@ public class CarManager {
         boolean checkSuccessful;
         String fileCarsName = "D:\\Lap Trinh Co Ban\\Assignment\\AssignmentPRO192\\src\\CarPrj\\cars.txt";
         String fileBrandsName = "D:\\Lap Trinh Co Ban\\Assignment\\AssignmentPRO192\\src\\CarPrj\\brands.txt";
-        BrandList brandList = new BrandList(); //Create an empty BrandList
-        CarList carList = new CarList(brandList); //Create an empty CarList
-        brandList.loadFromFile(fileBrandsName); //Load brands from the file brands.txt to brandList
-        carList.loadFromFile(fileCarsName); //Load cars from the file cars.txt to carList
+        BrandList brandList = new BrandList(); 
+        CarList carList = new CarList(brandList); 
+        brandList.loadFromFile(fileBrandsName); 
+        carList.loadFromFile(fileCarsName); 
         String bID;
-        ArrayList<String> ops = new ArrayList<>(11); //Create ArrayList ops of strings containing options of the program
+        ArrayList<String> ops = new ArrayList<>(11); 
 
         ops.add("1 - List all brands");
         ops.add("2 - Add a new brand");
