@@ -137,19 +137,21 @@ public class CarList extends ArrayList<Car> {
     }
 
     public void printBasedBrandName() {
-        String aPartOfBrandName;
-        int count = 0;
-        System.out.print("Input brand name: ");
-        aPartOfBrandName = scanner.nextLine();
-        for (int i = 0; i < this.size(); i++) {
-            if (aPartOfBrandName.matches(this.get(i).brand.getBrandName())) {
-                System.out.println(this.get(i).screenString());
-                count++;
-            }
-            if (count == 0) {
-                System.out.println("No car is detected !");
+        String brandName;
+        int n = this.size();
+        int cnt = 0;
+        Scanner sc = new Scanner(System.in);
+        brandName = sc.nextLine();
+
+        for(int i = 0; i < n; ++i){
+            Car c = this.get(i);
+            if(c.getBrand().getBrandName().contains(brandName)) {
+                System.out.println(c.screenString());
+                ++cnt;
             }
         }
+        
+        if(cnt == 0) System.out.println("No car is detected!");
     }
 
     public boolean removeCar() {

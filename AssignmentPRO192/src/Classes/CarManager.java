@@ -33,7 +33,7 @@ public class CarManager {
         ops.add("10 - Update a car based on its ID");
         ops.add("11 - Save cars to file, named cars.txt");
 
-        Menu menu = new Menu(); //Create a menu
+        Menu menu = new Menu(); 
 
         do {
             choice = menu.int_getChoice(ops);
