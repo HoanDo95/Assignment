@@ -119,18 +119,18 @@ public class CarList extends ArrayList<Car> {
         do {
             System.out.print("Input frame ID: ");
             frameID = scanner.nextLine();
-            if ((frameID.matches("F[0-9][0-9][0-9][0-9]")) && (searchFrameID(frameID) == -1)) {
+            if ((frameID.matches("F[0-9][0-9][0-9][0-9][0-9]")) && (searchFrameID(frameID) == -1)) {
                 break;
             }
-            System.out.println("The frame ID must be in F0000 format and not be duplicated. Try again !");
+            System.out.println("The frame ID must be in F00000 format and not be duplicated. Try again !");
         } while (true);
         do {
             System.out.print("Input engine ID: ");
             engineID = scanner.nextLine();
-            if ((engineID.matches("E[0-9][0-9][0-9][0-9]")) && (searchEngineID(engineID) == -1)) {
+            if ((engineID.matches("E[0-9][0-9][0-9][0-9][0-9]")) && (searchEngineID(engineID) == -1)) {
                 break;
             }
-            System.out.println("The engine ID must be in E0000 format and not be duplicated. Try again !");
+            System.out.println("The engine ID must be in E00000 format and not be duplicated. Try again !");
         } while (true);
         this.add(new Car(carID, brand, color, frameID, engineID));
         System.out.println("Car has added successfully !");

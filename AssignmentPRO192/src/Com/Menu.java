@@ -24,7 +24,7 @@ public class Menu {
         for (int i = 0; i < n; i++) {
             System.out.println("" + (i + 1) + ". " + brand.get(i));
         }
-        System.out.print("Please choose an option 1..11: ");
+        System.out.print("Please choose an list in brand to add (1-13): ");
         response = Integer.parseInt(scanner.nextLine());
         return response;
     }
